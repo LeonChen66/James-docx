@@ -20,6 +20,7 @@ for row in table[0].rows:
                 # inline[i].bold = True
 
 # row = table[0].rows[0]
+
 #
 # cell = row.cells[6]
 #
