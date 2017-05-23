@@ -1,8 +1,10 @@
+# -*- coding: UTF-8 -*-
 from PyQt5 import QtWidgets, QtGui
 import sys
 import docx
-import os
+from os import mkdir,chdir,system
 from james import Ui_Form    # import qt designer's gui
+
 
 class mywindow(QtWidgets.QWidget,Ui_Form):
     def __init__(self):
@@ -10,15 +12,37 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         self.setupUi(self)
         self.document = docx.Document('example2.docx')
         self.table = self.document.tables
-    #定义槽函数
     # click save function
     def hello(self):
+        self.document = docx.Document('example2.docx')
+        self.table = self.document.tables
         self.nessesary_information()
         self.basic_information()
         self.mitral()
         self.aortic()
-        self.document.save('test_james.docx')
-        os.system('test_james.docx')
+        self.tricuspid()
+        self.pulmonary()
+        self.wall_motion()
+        self.comment_word()
+        self.save_docx()
+        # self.document.save('test_james.docx')
+        # os.system('test_james.docx')
+
+    def save_docx(self):
+        dir_name = self.ID_input.text()
+        file_name = self.ID_input.text()+self.examdate_edit.date().toPyDate( \
+            ).strftime('_%Y_%m_%d') + '.docx'
+        try:
+            mkdir(dir_name)
+            chdir(dir_name)
+            self.document.save(file_name)
+            system(file_name)
+            chdir("..")
+        except:
+            chdir(dir_name)
+            self.document.save(file_name)
+            system(file_name)
+            chdir("..")
 
     def mitral(self):
         content = ''
@@ -86,10 +110,10 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
             content += '  '+self.A_normal_check.text()+'\n'
 
         if self.A_BMV_check.isChecked():
-            content += '  '+self.A_BMV_check_check.text()+'\n'
+            content += '  ' + 'Bioprothetic AV' + '\n'
 
         if self.A_MMV_check.isChecked():
-            content += '  '+self.A_MMV_check.text()+'\n'
+            content += '  '+ self.A_MMV_check.text() +'\n'
 
         if self.A_scler_check.isChecked():
             content += '  '+self.A_scler_check.text()+'\n'
@@ -126,6 +150,98 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         self.auto_paragraph('AA', content)
 
 
+    def tricuspid(self):
+        content = ''
+        if self.T_normal_check.isChecked():
+            content += '  Normal'
+
+        if self.T_pro_check.isChecked():
+            content += '\n  Prolapse : '
+
+        if self.T_anter_check.isChecked():
+            content += 'anterior leaflet, '
+
+        if self.T_post_check.isChecked():
+            content += 'posterior leaflet, '
+
+        if self.T_septal_check.isChecked():
+            content += 'septal leaflet '
+
+        if self.T_TR_check.isChecked():
+            content += '\n  TR : ' + self.T_TR_combo.currentText()
+            content += '\n    TR area : '+self.T_TRarea_input.text()+ 'cm^2'
+
+        if self.T_TRV_check.isChecked():
+            content += '\n  TRV : ' + self.T_TRV_input.text() + ' m/s'
+
+        if self.T_TV_check.isChecked():
+            content += '\n  Trans-TV PG : '
+
+        if self.T_others_check.isChecked():
+            content += '\n  Others : ' + self.T_others.toPlainText()
+
+        self.auto_paragraph('TT',content)
+
+    def pulmonary(self):
+        content = ''
+        if self.P_normal_check.isChecked():
+            content += self.P_normal_check.text()
+
+        if self.P_PR_check.isChecked():
+            content += '\n  PR : ' + self.P_PR_combo.currentText()
+
+        if self.P_others_check.isChecked():
+            content += '\n  Others : ' + self.P_others.toPlainText()
+
+        self.auto_paragraph('PP',content)
+
+    def wall_motion(self):
+        content = ''
+        if self.W_normal_check.isChecked():
+            content += '  '+self.W_normal_check.text()
+
+        if self.W_abnormal_check.isChecked():
+            content +='  ' + self.W_abnormal_check.text() + ' : '
+
+        if self.W_basal_check.isChecked():
+            content += self.W_basal_check.text() + '('
+        elif self.W_midcavity_check.isChecked():
+            content += self.W_midcavity_check.text() + '('
+        elif self.W_apical_check.isChecked():
+            content += self.W_apical_check.text() + '('
+
+        if self.W_anterior_check.isChecked():
+            content += self.W_anterior_check.text() + ', '
+
+        if self.W_septal_check.isChecked():
+            content += self.W_septal_check.text() + ', '
+
+        if self.W_inferior_check.isChecked():
+            content +=self.W_inferior_check.text()+ ', '
+
+        if self.W_posterior_check.isChecked():
+            content += self.W_posterior_check.text() + ', '
+
+        if self.W_lateral_check.isChecked():
+            content += self.W_lateral_check.text() + ', '
+
+        if self.W_hypo_check.isChecked():
+            content += self.W_hypo_check.text() + ', '
+
+        if self.W_akinesis_check.isChecked():
+            content += self.W_akinesis_check.text() + ', '
+
+        if self.W_dysk_check.isChecked():
+            content += self.W_dysk_check.text()
+
+        if self.W_abnormal_check.isChecked():
+            content += ')'
+
+
+        self.auto_paragraph('WW',content)
+
+    def comment_word(self):
+        self.auto_paragraph('CC',self.comment.toPlainText())
 
     def basic_information(self):
         self.auto_paragraph('exam', self.examdate_edit.date().toPyDate( \
@@ -137,7 +253,7 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         if self.male_input.isChecked():
             self.auto_paragraph('gender','男')
         elif self.female_input.isChecked():
-            self.auto_paragraph('gender',女)
+            self.auto_paragraph('gender', '女')
 
         self.auto_paragraph('old',self.old_input.text())
         self.auto_paragraph('height',self.height_input.text())
@@ -204,6 +320,8 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
 
 
     def reset_input(self):
+        self.document = docx.Document('example2.docx')
+        self.table = self.document.tables
         self.height_input.setText('')
         self.name_input.setText('')
         self.ID_input.setText('')
