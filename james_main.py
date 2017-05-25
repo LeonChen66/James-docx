@@ -287,6 +287,15 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         self.auto_word_cell('y_i', self.E_e_input.text())
         self.auto_word_cell('z_i', self.RVS_input.text())
         self.auto_word_cell('a_j', self.PVSD_combo.currentText())
+        self.auto_word_cell('c_j',self.MV_input.text())
+        self.auto_word_cell('b_j',self.AsAo_input.text())
+        self.auto_word_cell('d_j',self.LVM_index_input.text())
+        if self.Per_eff_check.isChecked():
+            content = ''
+            content += self.Per_combo.currentText()
+            content += '('+self.Per_eff_combo.currentText()+')' + ' '+self.Per_eff_input.text()+' cm '+ self.with_without_combo.currentText()+' echo-topande sign'
+            self.auto_word_cell('p_j',content)
+
         if self.M_mode_others_check.isChecked():
             self.auto_word_cell('input', self.M_mode_others.toPlainText())
         else:
