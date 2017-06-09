@@ -47,16 +47,16 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
     def mitral(self):
         content = ''
         if self.M_normal_check.isChecked():
-            content += '  ' + self.M_normal_check.text() + '\n'
+            content += '> ' + self.M_normal_check.text() + '\n'
 
         if self.M_BMV_check.isChecked():
-            content += '  ' + self.M_BMV_check.text() + '\n'
+            content += '> ' + self.M_BMV_check.text() + '\n'
 
         if self.M_MMV_check.isChecked():
-            content += '  '+self.M_MMV_check.text()+'\n'
+            content += '> '+self.M_MMV_check.text()+'\n'
 
         if self.M_MMVp_check.isChecked():
-            content += '  '+self.M_MMVp_check.text()+'\n'
+            content += '> '+self.M_MMVp_check.text()+'\n'
 
         if self.M_MMVp_combo1.currentIndex() !=0:
             content += ': Anterior leaflet ==>' + self.M_MMVp_combo1.currentText()
@@ -65,87 +65,87 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
             content += ': Posterior leaflet  ==>' + self.M_MMVp_combo.currentText()+'\n'
 
         if self.M_mitral_check.isChecked():
-            content += '  Mitral annulus calcification\n'
+            content += '> Mitral annulus calcification\n'
 
         if self.M_scler_check.isChecked():
-            content += '  '+self.M_scler_check.text()+'\n'
+            content += '> '+self.M_scler_check.text()+'\n'
 
         if self.M__fibro_check.isChecked():
-            content += '  '+self.M__fibro_check.text()+'\n'
+            content += '> '+self.M__fibro_check.text()+'\n'
 
         if self.M_myxo_check.isChecked():
-            content += '  '+self.M_myxo_check.text()+'\n'
+            content += '> '+self.M_myxo_check.text()+'\n'
 
         if self.M_scler_check.isChecked():
-            content += '  '+self.M_scler_check.text()+'\n'
+            content += '> '+self.M_scler_check.text()+'\n'
 
         if self.M_chordae_check.isChecked():
-            content += '  '+self.M_chordae_check.text()+'  '+\
+            content += '> '+self.M_chordae_check.text()+'  '+\
                        self.M_chordae_check_2.currentText()+'\n'
 
         if self.M_MVA_check.isChecked():
-            content += '  '+self.M_MVA_check.text()+' : '+\
+            content += '> '+self.M_MVA_check.text()+' : '+\
                 self.M_MVA_input.text()+' cm^2\n'
 
         if self.M_meantrans_check.isChecked():
-            content += '  '+self.M_meantrans_check.text()+' MV : '+\
+            content += '> '+self.M_meantrans_check.text()+' MV : '+\
                 self.M_meantrans_input.text()+' mmHg\n'
 
         if self.M_MR_check.isChecked():
             content += '  '+self.M_MR_check.text()+' : '+\
                 self.M_MR_combo.currentText()+'\n'
-            content += '     MR area : ' + self.M_MRarea_input.text() + ' cm^2\n'
-            content += '     MR area/LA area : ' + self.M_MRLA_input.text() + ' %\n'
-            content += '     Veno contrata: ' + self.M_Veno_input.text() + ' mm\n'
-            content += '     ERO : ' + self.M_ERO_input.text() + ' cm^2\n'
+            content += '   >> MR area : ' + self.M_MRarea_input.text() + ' cm^2\n'
+            content += '   >> MR area/LA area : ' + self.M_MRLA_input.text() + ' %\n'
+            content += '   >> Veno contrata: ' + self.M_Veno_input.text() + ' mm\n'
+            content += '   >> ERO : ' + self.M_ERO_input.text() + ' cm^2\n'
 
         if self.M_others_check.isChecked():
-            content +='  Others : ' + self.M_others.toPlainText()
+            content +='> Others : ' + self.M_others.toPlainText()
 
         self.auto_paragraph('MM',content)
 
     def aortic(self):
         content = ''
         if self.A_normal_check.isChecked():
-            content += '  '+self.A_normal_check.text()+'\n'
+            content += '> '+self.A_normal_check.text()+'\n'
 
         if self.A_BMV_check.isChecked():
-            content += '  ' + 'Bioprothetic AV' + '\n'
+            content += '> ' + 'Bioprothetic AV' + '\n'
 
         if self.A_MMV_check.isChecked():
-            content += '  '+ self.A_MMV_check.text() +'\n'
+            content += '> '+ self.A_MMV_check.text() +'\n'
 
         if self.A_scler_check.isChecked():
-            content += '  '+self.A_scler_check.text()+'\n'
+            content += '> '+self.A_scler_check.text()+'\n'
 
         if self.A_mitral_check.isChecked():
-            content += '  '+self.A_mitral_check.text()+' MV\n'
+            content += '> '+self.A_mitral_check.text()+' MV\n'
 
         if self.A_bicu_check.isChecked():
-            content += '  '+self.A_bicu_check.text()+'\n'
+            content += '> '+self.A_bicu_check.text()+'\n'
 
         if self.A_tricu_check.isChecked():
-            content += '  '+self.A_tricu_check.text()+'\n'
+            content += '> '+self.A_tricu_check.text()+'\n'
 
         if self.A_AVA_check.isChecked():
-            content += '  '+self.A_AVA_check.text()+' : '+\
+            content += '> '+self.A_AVA_check.text()+' : '+\
                 self.A_AVA_input.text()+' cm^2\n'
 
         if self.A_meantrans_check.isChecked():
-            content += '  '+self.A_meantrans_check.text()+'\n'
-            content += '     AV PG : '+self.A_AVPG_input.text()+' mmHg\n'
-            content += '     peak trans AV PG : ' + self.A_peckPG_input.text() + ' mmHg\n'
-            content += '     AV Vmax : ' + self.A_AVVmax_input.text() + ' m/s\n'
+            content += '>  '+self.A_meantrans_check.text()+'\n'
+            content += '   >> AV PG : '+self.A_AVPG_input.text()+' mmHg\n'
+            content += '   >> peak trans AV PG : ' + self.A_peckPG_input.text() + ' mmHg\n'
+            content += '   >> AV Vmax : ' + self.A_AVVmax_input.text() + ' m/s\n'
 
         if self.A_AR_check.isChecked():
-            content += '  AR : ('+self.A_AR_combo.currentText() +')\n'
-            content += '    jet height ratio = ' + self.A_jet_input.text()+' %\n'
-            content += '    PHT = ' + self.A_PHT_input.text()+' ms\n'
-            content += '    Veno contrata = ' + self.A_veno_input.text()+' mm\n'
-            content += '    '+self.A_dias_combo.currentText()+'diastolic reversal flow\n'
+            content += '> AR : ('+self.A_AR_combo.currentText() +')\n'
+            content += '  >> jet height ratio = ' + self.A_jet_input.text()+' %\n'
+            content += '  >> PHT = ' + self.A_PHT_input.text()+' ms\n'
+            content += '  >> Veno contrata = ' + self.A_veno_input.text()+' mm\n'
+            content += '  >> '+self.A_dias_combo.currentText()+'diastolic reversal flow\n'
 
         if self.A_others_check.isChecked():
-            content += '  Others : ' + self.A_others.toPlainText()
+            content += '> Others : ' + self.A_others.toPlainText()
 
         self.auto_paragraph('AA', content)
 
@@ -153,10 +153,10 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
     def tricuspid(self):
         content = ''
         if self.T_normal_check.isChecked():
-            content += '  Normal'
+            content += '> Normal'
 
         if self.T_pro_check.isChecked():
-            content += '\n  Prolapse : '
+            content += '\n> Prolapse : '
 
         if self.T_anter_check.isChecked():
             content += 'anterior leaflet, '
@@ -168,40 +168,40 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
             content += 'septal leaflet '
 
         if self.T_TR_check.isChecked():
-            content += '\n  TR : ' + self.T_TR_combo.currentText()
-            content += '\n    TR area : '+self.T_TRarea_input.text()+ 'cm^2'
+            content += '\n> TR : ' + self.T_TR_combo.currentText()
+            content += '\n  >> TR area : '+self.T_TRarea_input.text()+ 'cm^2'
 
         if self.T_TRV_check.isChecked():
-            content += '\n  TRV : ' + self.T_TRV_input.text() + ' m/s'
+            content += '\n> TRV : ' + self.T_TRV_input.text() + ' m/s'
 
         if self.T_TV_check.isChecked():
-            content += '\n  Trans-TV PG : '
+            content += '\n> Trans-TV PG : '
 
         if self.T_others_check.isChecked():
-            content += '\n  Others : ' + self.T_others.toPlainText()
+            content += '\n> Others : ' + self.T_others.toPlainText()
 
         self.auto_paragraph('TT',content)
 
     def pulmonary(self):
         content = ''
         if self.P_normal_check.isChecked():
-            content += self.P_normal_check.text()
+            content += '> '+self.P_normal_check.text()
 
         if self.P_PR_check.isChecked():
-            content += '\n  PR : ' + self.P_PR_combo.currentText()
+            content += '\n> PR : ' + self.P_PR_combo.currentText()
 
         if self.P_others_check.isChecked():
-            content += '\n  Others : ' + self.P_others.toPlainText()
+            content += '\n> Others : ' + self.P_others.toPlainText()
 
         self.auto_paragraph('PP',content)
 
     def wall_motion(self):
         content = ''
         if self.W_normal_check.isChecked():
-            content += '  '+self.W_normal_check.text()
+            content += '> '+self.W_normal_check.text()
 
         if self.W_abnormal_check.isChecked():
-            content +='  ' + self.W_abnormal_check.text() + ' : '
+            content +='> ' + self.W_abnormal_check.text() + ' : '
 
         if self.W_basal_check.isChecked():
             content += self.W_basal_check.text() + '('
@@ -293,7 +293,7 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         if self.Per_eff_check.isChecked():
             content = ''
             content += self.Per_combo.currentText()
-            content += '('+self.Per_eff_combo.currentText()+')' + ' '+self.Per_eff_input.text()+' cm '+ self.with_without_combo.currentText()+' echo-topande sign'
+            content += '('+self.Per_eff_combo.currentText()+')' + ' '+self.Per_eff_input.text()+' cm '+ self.with_without_combo.currentText()+' echo-tampande sign'
             self.auto_word_cell('p_j',content)
 
         if self.M_mode_others_check.isChecked():
