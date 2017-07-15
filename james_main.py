@@ -4,7 +4,8 @@ import sys
 import docx
 from os import mkdir,chdir,system
 from james import Ui_Form    # import qt designer's gui
-
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 class mywindow(QtWidgets.QWidget,Ui_Form):
     def __init__(self):
@@ -30,8 +31,7 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
 
     def save_docx(self):
         dir_name = self.ID_input.text()
-        file_name = self.ID_input.text()+self.examdate_edit.date().toPyDate( \
-            ).strftime('_%Y_%m_%d') + '.docx'
+        file_name = self.ID_input.text()+datetime.now().strftime('_%Y_%m_%d') + '.docx'
         try:
             mkdir(dir_name)
             chdir(dir_name)
@@ -88,7 +88,7 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
                 self.M_MVA_input.text()+' cm^2\n'
 
         if self.M_meantrans_check.isChecked():
-            content += '> '+self.M_meantrans_check.text()+' MV : '+\
+            content += '> '+self.M_meantrans_check.text()+' MV P.G.: '+\
                 self.M_meantrans_input.text()+' mmHg\n'
 
         if self.M_MR_check.isChecked():
@@ -142,7 +142,7 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
             content += '  >> jet height ratio = ' + self.A_jet_input.text()+' %\n'
             content += '  >> PHT = ' + self.A_PHT_input.text()+' ms\n'
             content += '  >> Veno contrata = ' + self.A_veno_input.text()+' mm\n'
-            content += '  >> '+self.A_dias_combo.currentText()+'diastolic reversal flow\n'
+            content += '  >> '+self.A_dias_combo.currentText()+' diastolic reversal flow\n'
 
         if self.A_others_check.isChecked():
             content += '> Others : ' + self.A_others.toPlainText()
@@ -201,14 +201,11 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
             content += '> '+self.W_normal_check.text()
 
         if self.W_abnormal_check.isChecked():
-            content +='> ' + self.W_abnormal_check.text() + ' : '
+            content +='> ' + self.W_abnormal_check.text() + ':'
 
+        # -------- basal ---------
         if self.W_basal_check.isChecked():
-            content += self.W_basal_check.text() + '('
-        elif self.W_midcavity_check.isChecked():
-            content += self.W_midcavity_check.text() + '('
-        elif self.W_apical_check.isChecked():
-            content += self.W_apical_check.text() + '('
+            content += '\n' + self.W_basal_check.text() + '('
 
         if self.W_anterior_check.isChecked():
             content += self.W_anterior_check.text() + ', '
@@ -237,6 +234,65 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         if self.W_abnormal_check.isChecked():
             content += ')'
 
+        # ------- midcavity ------
+        if self.W_midcavity_check.isChecked():
+            content += '\n' + self.W_midcavity_check.text() + '('
+
+        if self.W_m_anterior_check.isChecked():
+            content += self.W_anterior_check.text() + ', '
+
+        if self.W_m_septal_check.isChecked():
+            content += self.W_septal_check.text() + ', '
+
+        if self.W_m_inferior_check.isChecked():
+            content +=self.W_inferior_check.text()+ ', '
+
+        if self.W_m_posterior_check.isChecked():
+            content += self.W_posterior_check.text() + ', '
+
+        if self.W_m_lateral_check.isChecked():
+            content += self.W_lateral_check.text() + ', '
+
+        if self.W_m_hypokinesis_check.isChecked():
+            content += self.W_hypo_check.text() + ', '
+
+        if self.W_m_akinesis_check.isChecked():
+            content += self.W_akinesis_check.text() + ', '
+
+        if self.W_m_dyskinesis_check.isChecked():
+            content += self.W_dysk_check.text()
+
+        if self.W_abnormal_check.isChecked():
+            content += ')'
+        # ------- apical ----------
+        if self.W_apical_check.isChecked():
+            content += '\n' + self.W_apical_check.text() + '('
+        if self.W_a_anterior_check.isChecked():
+            content += self.W_anterior_check.text() + ', '
+
+        if self.W_a_septal_check.isChecked():
+            content += self.W_septal_check.text() + ', '
+
+        if self.W_a_inferior_check.isChecked():
+            content +=self.W_inferior_check.text()+ ', '
+
+        if self.W_a_posterior_check.isChecked():
+            content += self.W_posterior_check.text() + ', '
+
+        if self.W_a_lateral_check.isChecked():
+            content += self.W_lateral_check.text() + ', '
+
+        if self.W_a_hypokinesis_check.isChecked():
+            content += self.W_hypo_check.text() + ', '
+
+        if self.W_a_akinesis_check.isChecked():
+            content += self.W_akinesis_check.text() + ', '
+
+        if self.W_a_dyskinesis_check.isChecked():
+            content += self.W_dysk_check.text()
+
+        if self.W_abnormal_check.isChecked():
+            content += ')'
 
         self.auto_paragraph('WW',content)
 
@@ -244,8 +300,7 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         self.auto_paragraph('CC',self.comment.toPlainText())
 
     def basic_information(self):
-        self.auto_paragraph('exam', self.examdate_edit.date().toPyDate( \
-            ).strftime('%Y{y}%m{m}%d{d}').format(y='年', m='月', d='日'))
+        self.auto_paragraph('exam', datetime.now().strftime('%Y{y}%m{m}%d{d}').format(y='年', m='月', d='日'))
         self.auto_paragraph('birth',self.birthdate_edit.date().toPyDate(\
             ).strftime('%Y{y}%m{m}%d{d}').format(y='年', m='月', d='日'))
         self.auto_paragraph('name',self.name_input.text())
@@ -255,7 +310,10 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         elif self.female_input.isChecked():
             self.auto_paragraph('gender', '女')
 
-        self.auto_paragraph('old',self.old_input.text())
+        #calculate the years old
+        diff = relativedelta(datetime.now(), self.birthdate_edit.date().toPyDate())
+        year_old = str(diff.years) + '歲' + str(diff.months) +'個月'
+        self.auto_paragraph('old',year_old)
         self.auto_paragraph('height',self.height_input.text())
         self.auto_paragraph('weight',self.weight_input.text())
 
@@ -271,7 +329,8 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         self.auto_word_cell('i_i', self.EPSS_input.text())
         self.auto_word_cell('j_i', self.IVCexp_input.text())
         self.auto_word_cell('k_i', self.IVCixp_input.text())
-        self.auto_word_cell('l_i', self.Res_input.text())
+        Res_value = '%.2f' %((float(self.IVCexp_input.text())-float(self.IVCixp_input.text()))*100/float(self.IVCexp_input.text()))
+        self.auto_word_cell('l_i', Res_value)  #Respiratory charge = (exp-isp)/esp  (%)
         self.auto_word_cell('m_i', self.RVD_input.text())
         self.auto_word_cell('n_i', self.RVAd_input.text())
         self.auto_word_cell('o_i', self.RVAD2_input.text())
@@ -283,17 +342,20 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         # self.auto_word_cell('u_i', self..text())
         self.auto_word_cell('v_i', self.Eneed_input.text())
         self.auto_word_cell('w_i', self.Elat_input.text())
-        self.auto_word_cell('x_i', self.mean_e_input.text())
-        self.auto_word_cell('y_i', self.E_e_input.text())
+        mean_e_value = '%.2f' %((float(self.Eneed_input.text())+float(self.Elat_input.text()))/2)
+        self.auto_word_cell('x_i', mean_e_value)   #mean e'
+        E_e_value = '%.2f' %(float(self.MVEv_input.text())/float(mean_e_value))
+        self.auto_word_cell('y_i', E_e_value)
         self.auto_word_cell('z_i', self.RVS_input.text())
         self.auto_word_cell('a_j', self.PVSD_combo.currentText())
         self.auto_word_cell('c_j',self.MV_input.text())
         self.auto_word_cell('b_j',self.AsAo_input.text())
         self.auto_word_cell('d_j',self.LVM_index_input.text())
+        self.auto_word_cell('z_j',self.MVDt_input.text())
         if self.Per_eff_check.isChecked():
             content = ''
             content += self.Per_combo.currentText()
-            content += '('+self.Per_eff_combo.currentText()+')' + ' '+self.Per_eff_input.text()+' cm '+ self.with_without_combo.currentText()+' echo-tampande sign'
+            content += '-('+self.Per_eff_combo.currentText()+')' + ' '+self.Per_eff_input.text()+' cm '+ self.with_without_combo.currentText()+' echo-tamponade-sign'
             self.auto_word_cell('p_j',content)
 
         if self.M_mode_others_check.isChecked():

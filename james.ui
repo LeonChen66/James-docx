@@ -61,13 +61,342 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-128</y>
+        <y>0</y>
         <width>1327</width>
-        <height>1625</height>
+        <height>1830</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_7">
-       <item row="5" column="4" colspan="2">
+       <item row="6" column="0" rowspan="2" colspan="4">
+        <widget class="QFrame" name="frame_4">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_10">
+          <item row="7" column="0">
+           <widget class="QCheckBox" name="M__fibro_check">
+            <property name="text">
+             <string>Fibrothickened MV</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0">
+           <widget class="QCheckBox" name="M_MR_check">
+            <property name="text">
+             <string>MR</string>
+            </property>
+           </widget>
+          </item>
+          <item row="18" column="0" colspan="3">
+           <widget class="QTextEdit" name="M_others"/>
+          </item>
+          <item row="9" column="0">
+           <widget class="QCheckBox" name="M_chordae_check">
+            <property name="text">
+             <string>Chordae </string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="M_MMVp_combo1">
+            <item>
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>A1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>A2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>A3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>A1+A2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>A1+A3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>A2+A3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>A1+A2+A3</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QCheckBox" name="M_myxo_check">
+            <property name="text">
+             <string>Myxomatous </string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QCheckBox" name="M_MVA_check">
+            <property name="text">
+             <string>MVA</string>
+            </property>
+           </widget>
+          </item>
+          <item row="16" column="0">
+           <widget class="QLabel" name="label_45">
+            <property name="text">
+             <string>ERO</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="1" colspan="2">
+           <widget class="QLineEdit" name="M_MVA_input">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="1" colspan="2">
+           <widget class="QComboBox" name="M_MR_combo">
+            <item>
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mild</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>moderate</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mod_severe</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>severe</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="13" column="1" colspan="2">
+           <widget class="QLineEdit" name="M_MRarea_input">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QComboBox" name="M_MMVp_combo">
+            <item>
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>P1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>P2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>P3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>P1+P2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>P1+P3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>P2+P3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>P1+P2+P3</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="13" column="0">
+           <widget class="QLabel" name="label_37">
+            <property name="text">
+             <string>MR area</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="M_BMV_check">
+            <property name="text">
+             <string>Bioprothetic MV</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_74">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mitral valve&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="1" colspan="2">
+           <widget class="QLineEdit" name="M_meantrans_input">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="M_MMVp_check">
+            <property name="text">
+             <string>MV prolapsed</string>
+            </property>
+           </widget>
+          </item>
+          <item row="17" column="0">
+           <widget class="QCheckBox" name="M_others_check">
+            <property name="text">
+             <string>Others</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="M_MMV_check">
+            <property name="text">
+             <string>Mechanical MV</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1" colspan="2">
+           <widget class="QComboBox" name="M_chordae_check_2">
+            <item>
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>with flail of anterior</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>with flail of posterior </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>with partial flail of anterior</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>with partial flail of posterior</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QCheckBox" name="M_meantrans_check">
+            <property name="text">
+             <string>mean trans</string>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0">
+           <widget class="QLabel" name="label_44">
+            <property name="text">
+             <string>MR area/LA area</string>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="0">
+           <widget class="QLabel" name="label_46">
+            <property name="text">
+             <string>Veno contrata</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QCheckBox" name="M_scler_check">
+            <property name="text">
+             <string>Sclerotic MV</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="M_normal_check">
+            <property name="text">
+             <string>Normal</string>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="1" colspan="2">
+           <widget class="QLineEdit" name="M_Veno_input">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QCheckBox" name="M_mitral_check">
+            <property name="text">
+             <string>Mitral  annuluus</string>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="1" colspan="2">
+           <widget class="QLineEdit" name="M_MRLA_input">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="16" column="1" colspan="2">
+           <widget class="QLineEdit" name="M_ERO_input">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="4" column="4" colspan="2">
         <widget class="QFrame" name="frame_2">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -364,336 +693,7 @@
          </layout>
         </widget>
        </item>
-       <item row="7" column="0" rowspan="2" colspan="4">
-        <widget class="QFrame" name="frame_4">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_10">
-          <item row="4" column="0">
-           <widget class="QCheckBox" name="M_MMVp_check">
-            <property name="text">
-             <string>MV prolapsed</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_74">
-            <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mitral valve&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QCheckBox" name="M_normal_check">
-            <property name="text">
-             <string>Normal</string>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="0">
-           <widget class="QCheckBox" name="M__fibro_check">
-            <property name="text">
-             <string>Fibrothickened MV</string>
-            </property>
-           </widget>
-          </item>
-          <item row="10" column="1" colspan="2">
-           <widget class="QLineEdit" name="M_MVA_input">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="9" column="1" colspan="2">
-           <widget class="QComboBox" name="M_chordae_check_2">
-            <item>
-             <property name="text">
-              <string/>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>with flail of anterior</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>with flail of posterior </string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>with partial flail of anterior</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>with partial flail of posterior</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="11" column="0">
-           <widget class="QCheckBox" name="M_meantrans_check">
-            <property name="text">
-             <string>mean trans</string>
-            </property>
-           </widget>
-          </item>
-          <item row="11" column="1" colspan="2">
-           <widget class="QLineEdit" name="M_meantrans_input">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="2">
-           <widget class="QComboBox" name="M_MMVp_combo">
-            <item>
-             <property name="text">
-              <string/>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>P1</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>P2</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>P3</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>P1+P2</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>P1+P3</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>P2+P3</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>P1+P2+P3</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QCheckBox" name="M_MMV_check">
-            <property name="text">
-             <string>Mechanical MV</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="0">
-           <widget class="QCheckBox" name="M_scler_check">
-            <property name="text">
-             <string>Sclerotic MV</string>
-            </property>
-           </widget>
-          </item>
-          <item row="12" column="0">
-           <widget class="QCheckBox" name="M_MR_check">
-            <property name="text">
-             <string>MR</string>
-            </property>
-           </widget>
-          </item>
-          <item row="9" column="0">
-           <widget class="QCheckBox" name="M_chordae_check">
-            <property name="text">
-             <string>Chordae </string>
-            </property>
-           </widget>
-          </item>
-          <item row="12" column="1" colspan="2">
-           <widget class="QComboBox" name="M_MR_combo">
-            <item>
-             <property name="text">
-              <string/>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>mild</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>moderate</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>mod_severe</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>severe</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QComboBox" name="M_MMVp_combo1">
-            <item>
-             <property name="text">
-              <string/>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>A1</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>A2</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>A3</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>A1+A2</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>A1+A3</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>A2+A3</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>A1+A2+A3</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="5" column="0">
-           <widget class="QCheckBox" name="M_mitral_check">
-            <property name="text">
-             <string>Mitral  annuluus</string>
-            </property>
-           </widget>
-          </item>
-          <item row="8" column="0">
-           <widget class="QCheckBox" name="M_myxo_check">
-            <property name="text">
-             <string>Myxomatous </string>
-            </property>
-           </widget>
-          </item>
-          <item row="10" column="0">
-           <widget class="QCheckBox" name="M_MVA_check">
-            <property name="text">
-             <string>MVA</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QCheckBox" name="M_BMV_check">
-            <property name="text">
-             <string>Bioprothetic MV</string>
-            </property>
-           </widget>
-          </item>
-          <item row="17" column="0">
-           <widget class="QCheckBox" name="M_others_check">
-            <property name="text">
-             <string>Others</string>
-            </property>
-           </widget>
-          </item>
-          <item row="18" column="0" colspan="3">
-           <widget class="QTextEdit" name="M_others"/>
-          </item>
-          <item row="16" column="0">
-           <widget class="QLabel" name="label_45">
-            <property name="text">
-             <string>ERO</string>
-            </property>
-           </widget>
-          </item>
-          <item row="14" column="0">
-           <widget class="QLabel" name="label_44">
-            <property name="text">
-             <string>MR area/LA area</string>
-            </property>
-           </widget>
-          </item>
-          <item row="15" column="0">
-           <widget class="QLabel" name="label_46">
-            <property name="text">
-             <string>Veno contrata</string>
-            </property>
-           </widget>
-          </item>
-          <item row="15" column="1" colspan="2">
-           <widget class="QLineEdit" name="M_Veno_input">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="13" column="1" colspan="2">
-           <widget class="QLineEdit" name="M_MRarea_input">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="14" column="1" colspan="2">
-           <widget class="QLineEdit" name="M_MRLA_input">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="13" column="0">
-           <widget class="QLabel" name="label_37">
-            <property name="text">
-             <string>MR area</string>
-            </property>
-           </widget>
-          </item>
-          <item row="16" column="1" colspan="2">
-           <widget class="QLineEdit" name="M_ERO_input">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="5" column="6">
+       <item row="4" column="6">
         <widget class="QFrame" name="frame_3">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -770,20 +770,6 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_66">
-              <property name="text">
-               <string>cm/s</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_67">
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item>
              <widget class="QLabel" name="label_68">
               <property name="text">
                <string>cm/s</string>
@@ -837,20 +823,6 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_55">
-              <property name="text">
-               <string>mean e'</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_56">
-              <property name="text">
-               <string>E/e'</string>
-              </property>
-             </widget>
-            </item>
-            <item>
              <widget class="QLabel" name="label_57">
               <property name="text">
                <string>RVS'</string>
@@ -875,12 +847,6 @@
             </item>
             <item>
              <widget class="QLineEdit" name="Elat_input"/>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="mean_e_input"/>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="E_e_input"/>
             </item>
             <item>
              <widget class="QLineEdit" name="RVS_input"/>
@@ -917,7 +883,7 @@
          </layout>
         </widget>
        </item>
-       <item row="7" column="4" rowspan="2" colspan="2">
+       <item row="6" column="4" rowspan="2" colspan="2">
         <widget class="QFrame" name="frame_5">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -1159,124 +1125,91 @@
          </layout>
         </widget>
        </item>
-       <item row="9" column="0" colspan="5">
-        <widget class="QFrame" name="frame_8">
+       <item row="7" column="6">
+        <widget class="QFrame" name="frame_7">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <layout class="QGridLayout" name="gridLayout_3">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_69">
+         <layout class="QGridLayout" name="gridLayout_8">
+          <item row="0" column="0" colspan="2">
+           <widget class="QLabel" name="label_79">
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Wall motion&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Pulmonary Valve&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QCheckBox" name="W_normal_check">
+           <widget class="QCheckBox" name="P_normal_check">
             <property name="text">
              <string>Normal</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
-           <widget class="QLabel" name="label_83">
-            <property name="text">
-             <string>(If abnormal)</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QCheckBox" name="W_anterior_check">
-            <property name="text">
-             <string>anterior</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
-           <widget class="QCheckBox" name="W_lateral_check">
-            <property name="text">
-             <string>lateral</string>
-            </property>
-           </widget>
-          </item>
           <item row="2" column="0">
-           <widget class="QCheckBox" name="W_abnormal_check">
+           <widget class="QCheckBox" name="P_PR_check">
             <property name="text">
-             <string>Abnormal</string>
+             <string>PR</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QCheckBox" name="W_basal_check">
+           <widget class="QComboBox" name="P_PR_combo">
+            <item>
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mild</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>significant</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="P_others_check">
             <property name="text">
-             <string>basal</string>
+             <string>Others</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="2">
-           <widget class="QCheckBox" name="W_septal_check">
-            <property name="text">
-             <string>septal</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="3">
-           <widget class="QCheckBox" name="W_hypo_check">
-            <property name="text">
-             <string>hypokinesis</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QCheckBox" name="W_midcavity_check">
-            <property name="text">
-             <string>midcavity</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="2">
-           <widget class="QCheckBox" name="W_inferior_check">
-            <property name="text">
-             <string>inferior</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="3">
-           <widget class="QCheckBox" name="W_akinesis_check">
-            <property name="text">
-             <string>akinesis</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QCheckBox" name="W_apical_check">
-            <property name="text">
-             <string>apical</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="2">
-           <widget class="QCheckBox" name="W_posterior_check">
-            <property name="text">
-             <string>posterior</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="3">
-           <widget class="QCheckBox" name="W_dysk_check">
-            <property name="text">
-             <string>dyskinesis</string>
-            </property>
-           </widget>
+          <item row="4" column="0" colspan="2">
+           <widget class="QTextEdit" name="P_others"/>
           </item>
          </layout>
         </widget>
        </item>
-       <item row="7" column="6">
+       <item row="8" column="6">
+        <widget class="QFrame" name="frame_9">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_82">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Comment&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QTextEdit" name="comment"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="6" column="6">
         <widget class="QFrame" name="frame_6">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -1410,159 +1343,19 @@
          </layout>
         </widget>
        </item>
-       <item row="9" column="6">
-        <widget class="QFrame" name="frame_9">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_6">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_82">
-            <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Comment&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QTextEdit" name="comment"/>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="8" column="6">
-        <widget class="QFrame" name="frame_7">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_8">
-          <item row="0" column="0" colspan="2">
-           <widget class="QLabel" name="label_79">
-            <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Pulmonary Valve&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QCheckBox" name="P_normal_check">
-            <property name="text">
-             <string>Normal</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QCheckBox" name="P_PR_check">
-            <property name="text">
-             <string>PR</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QComboBox" name="P_PR_combo">
-            <item>
-             <property name="text">
-              <string/>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>mild</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>significant</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QCheckBox" name="P_others_check">
-            <property name="text">
-             <string>Others</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0" colspan="2">
-           <widget class="QTextEdit" name="P_others"/>
-          </item>
-         </layout>
-        </widget>
-       </item>
        <item row="2" column="1">
         <widget class="QLineEdit" name="height_input"/>
        </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_85">
-         <property name="text">
-          <string>性別</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="6">
-        <widget class="QDateEdit" name="birthdate_edit"/>
-       </item>
-       <item row="3" column="1">
-        <widget class="QRadioButton" name="male_input">
-         <property name="text">
-          <string>男</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="5">
-        <widget class="QLabel" name="label_84">
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;出生年月日&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QDateEdit" name="examdate_edit">
+       <item row="9" column="5">
+        <widget class="QPushButton" name="save_print_btn">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="reset_btn">
          <property name="text">
-          <string>Reset</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>姓名</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="3">
-        <widget class="QLabel" name="label_87">
-         <property name="text">
-          <string>體重</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="3">
-        <widget class="QLabel" name="label_92">
-         <property name="text">
-          <string>年齡</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="3">
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>身分證字號</string>
+          <string>Save and Print (Not finished)</string>
          </property>
         </widget>
        </item>
@@ -1573,8 +1366,63 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="4">
-        <widget class="QLineEdit" name="old_input"/>
+       <item row="5" column="4">
+        <widget class="QLabel" name="label_73">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Valve&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="reset_btn">
+         <property name="text">
+          <string>Reset</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_85">
+         <property name="text">
+          <string>性別</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QRadioButton" name="male_input">
+         <property name="text">
+          <string>男</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>姓名</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>身分證字號</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4">
+        <widget class="QLineEdit" name="weight_input"/>
+       </item>
+       <item row="1" column="4">
+        <widget class="QLineEdit" name="ID_input"/>
+       </item>
+       <item row="1" column="5">
+        <widget class="QLabel" name="label_84">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;出生年月日&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="6">
+        <widget class="QDateEdit" name="birthdate_edit"/>
        </item>
        <item row="3" column="2">
         <widget class="QRadioButton" name="female_input">
@@ -1582,29 +1430,6 @@
           <string>女</string>
          </property>
         </widget>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>檢查日期：</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="4">
-        <widget class="QLabel" name="label_73">
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Valve&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="name_input"/>
-       </item>
-       <item row="2" column="4">
-        <widget class="QLineEdit" name="weight_input"/>
-       </item>
-       <item row="1" column="4">
-        <widget class="QLineEdit" name="ID_input"/>
        </item>
        <item row="0" column="4">
         <widget class="QLabel" name="label">
@@ -1619,27 +1444,24 @@
          </property>
         </widget>
        </item>
-       <item row="10" column="4">
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="name_input"/>
+       </item>
+       <item row="2" column="3">
+        <widget class="QLabel" name="label_87">
+         <property name="text">
+          <string>體重</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="4">
         <widget class="QPushButton" name="save_btn">
          <property name="text">
           <string>Save</string>
          </property>
         </widget>
        </item>
-       <item row="10" column="5">
-        <widget class="QPushButton" name="save_print_btn">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>Save and Print (Not finished)</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0" rowspan="2" colspan="4">
+       <item row="4" column="0" rowspan="2" colspan="4">
         <widget class="QFrame" name="frame">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -1702,31 +1524,40 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_17">
+          <item row="14" column="0" colspan="3">
+           <widget class="QPlainTextEdit" name="M_mode_others"/>
+          </item>
+          <item row="12" column="0">
+           <widget class="QLabel" name="label_50">
             <property name="text">
-             <string>PWDd</string>
+             <string>LVM index</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_72">
+          <item row="12" column="1">
+           <widget class="QLineEdit" name="LVM_index_input"/>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="label_22">
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;M-mode&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>LVEF</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="2">
-           <widget class="QLabel" name="label_3">
+          <item row="4" column="2">
+           <widget class="QLabel" name="label_8">
             <property name="text">
              <string>mm</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_16">
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="LVDs_input"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_3">
             <property name="text">
-             <string>IVDd</string>
+             <string>mm</string>
             </property>
            </widget>
           </item>
@@ -1744,11 +1575,28 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
-           <widget class="QLineEdit" name="LVDs_input"/>
+          <item row="11" column="1">
+           <widget class="QLineEdit" name="IVCixp_input"/>
+          </item>
+          <item row="5" column="2">
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>mm</string>
+            </property>
+           </widget>
           </item>
           <item row="2" column="1">
            <widget class="QLineEdit" name="PWDd_input"/>
+          </item>
+          <item row="10" column="1">
+           <widget class="QLineEdit" name="IVCexp_input"/>
+          </item>
+          <item row="13" column="0">
+           <widget class="QCheckBox" name="M_mode_others_check">
+            <property name="text">
+             <string>Others</string>
+            </property>
+           </widget>
           </item>
           <item row="11" column="2">
            <widget class="QLabel" name="label_15">
@@ -1757,7 +1605,59 @@
             </property>
            </widget>
           </item>
-          <item row="14" column="2">
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="Ao_input"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_72">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;M-mode&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="2">
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>%</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QLabel" name="label_25">
+            <property name="text">
+             <string>IVC_exp</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>IVDd</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QLabel" name="label_26">
+            <property name="text">
+             <string>IVC_ixp</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>PWDd</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="2">
+           <widget class="QLabel" name="label_61">
+            <property name="text">
+             <string>g/m^2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="2">
            <spacer name="horizontalSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -1770,98 +1670,232 @@
             </property>
            </spacer>
           </item>
-          <item row="12" column="1">
-           <widget class="QLineEdit" name="Res_input"/>
-          </item>
-          <item row="11" column="1">
-           <widget class="QLineEdit" name="IVCixp_input"/>
-          </item>
-          <item row="11" column="0">
-           <widget class="QLabel" name="label_26">
+         </layout>
+        </widget>
+       </item>
+       <item row="8" column="0" colspan="6">
+        <widget class="QFrame" name="frame_8">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_69">
             <property name="text">
-             <string>IVC_ixp</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Wall motion&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QCheckBox" name="W_inferior_check">
+            <property name="text">
+             <string>inferior</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="W_abnormal_check">
+            <property name="text">
+             <string>Abnormal</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="3">
+           <widget class="QCheckBox" name="W_dysk_check">
+            <property name="text">
+             <string>dyskinesis</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QCheckBox" name="W_akinesis_check">
+            <property name="text">
+             <string>akinesis</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QCheckBox" name="W_lateral_check">
+            <property name="text">
+             <string>lateral</string>
             </property>
            </widget>
           </item>
           <item row="4" column="2">
-           <widget class="QLabel" name="label_8">
+           <widget class="QCheckBox" name="W_posterior_check">
             <property name="text">
-             <string>mm</string>
+             <string>posterior</string>
             </property>
            </widget>
           </item>
-          <item row="10" column="1">
-           <widget class="QLineEdit" name="IVCexp_input"/>
-          </item>
-          <item row="10" column="0">
-           <widget class="QLabel" name="label_25">
+          <item row="2" column="3">
+           <widget class="QCheckBox" name="W_hypo_check">
             <property name="text">
-             <string>IVC_exp</string>
+             <string>hypokinesis</string>
             </property>
            </widget>
           </item>
-          <item row="12" column="0">
-           <widget class="QLabel" name="label_34">
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="W_normal_check">
             <property name="text">
-             <string>Respirtory</string>
+             <string>Normal</string>
             </property>
            </widget>
           </item>
-          <item row="14" column="0">
-           <widget class="QCheckBox" name="M_mode_others_check">
+          <item row="1" column="2">
+           <widget class="QCheckBox" name="W_anterior_check">
             <property name="text">
-             <string>Others</string>
+             <string>anterior</string>
             </property>
            </widget>
           </item>
-          <item row="15" column="0" colspan="3">
-           <widget class="QPlainTextEdit" name="M_mode_others"/>
+          <item row="12" column="3">
+           <widget class="QCheckBox" name="W_a_dyskinesis_check">
+            <property name="text">
+             <string>dyskinesis</string>
+            </property>
+           </widget>
           </item>
           <item row="12" column="2">
-           <widget class="QLabel" name="label_33">
+           <widget class="QCheckBox" name="W_a_posterior_check">
             <property name="text">
-             <string>%</string>
+             <string>posterior</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="3">
+           <widget class="QCheckBox" name="W_m_lateral_check">
+            <property name="text">
+             <string>lateral</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="2">
+           <widget class="QCheckBox" name="W_m_septal_check">
+            <property name="text">
+             <string>septal</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="2">
+           <widget class="QCheckBox" name="W_m_posterior_check">
+            <property name="text">
+             <string>posterior</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="2">
+           <widget class="QCheckBox" name="W_m_inferior_check">
+            <property name="text">
+             <string>inferior</string>
             </property>
            </widget>
           </item>
           <item row="5" column="2">
-           <widget class="QLabel" name="label_9">
+           <widget class="QCheckBox" name="W_m_anterior_check">
             <property name="text">
-             <string>mm</string>
+             <string>anterior</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="3">
+           <widget class="QCheckBox" name="W_a_lateral_check">
+            <property name="text">
+             <string>lateral</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QCheckBox" name="W_apical_check">
+            <property name="text">
+             <string>apical</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="3">
+           <widget class="QCheckBox" name="W_m_akinesis_check">
+            <property name="text">
+             <string>akinesis</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="3">
+           <widget class="QCheckBox" name="W_m_hypokinesis_check">
+            <property name="text">
+             <string>hypokinesis</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="2">
+           <widget class="QCheckBox" name="W_a_anterior_check">
+            <property name="text">
+             <string>anterior</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="3">
+           <widget class="QCheckBox" name="W_m_dyskinesis_check">
+            <property name="text">
+             <string>dyskinesis</string>
             </property>
            </widget>
           </item>
           <item row="5" column="1">
-           <widget class="QLineEdit" name="Ao_input"/>
-          </item>
-          <item row="7" column="2">
-           <widget class="QLabel" name="label_11">
+           <widget class="QCheckBox" name="W_midcavity_check">
             <property name="text">
-             <string>%</string>
+             <string>midcavity</string>
             </property>
            </widget>
           </item>
-          <item row="7" column="0">
-           <widget class="QLabel" name="label_22">
+          <item row="10" column="2">
+           <widget class="QCheckBox" name="W_a_septal_check">
             <property name="text">
-             <string>LVEF</string>
+             <string>septal</string>
             </property>
            </widget>
           </item>
-          <item row="13" column="0">
-           <widget class="QLabel" name="label_50">
+          <item row="11" column="3">
+           <widget class="QCheckBox" name="W_a_akinesis_check">
             <property name="text">
-             <string>LVM index</string>
+             <string>akinesis</string>
             </property>
            </widget>
           </item>
-          <item row="13" column="1">
-           <widget class="QLineEdit" name="LVM_index_input"/>
-          </item>
-          <item row="13" column="2">
-           <widget class="QLabel" name="label_61">
+          <item row="10" column="3">
+           <widget class="QCheckBox" name="W_a_hypokinesis_check">
             <property name="text">
-             <string>g/m^2</string>
+             <string>hypokinesis</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="2">
+           <widget class="QCheckBox" name="W_a_inferior_check">
+            <property name="text">
+             <string>inferior</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QCheckBox" name="W_septal_check">
+            <property name="text">
+             <string>septal</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_83">
+            <property name="text">
+             <string>(If abnormal)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="W_basal_check">
+            <property name="text">
+             <string>basal</string>
             </property>
            </widget>
           </item>
@@ -1874,6 +1908,146 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>name_input</tabstop>
+  <tabstop>ID_input</tabstop>
+  <tabstop>birthdate_edit</tabstop>
+  <tabstop>height_input</tabstop>
+  <tabstop>weight_input</tabstop>
+  <tabstop>male_input</tabstop>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>M_MR_check</tabstop>
+  <tabstop>M_others</tabstop>
+  <tabstop>M_MMVp_combo1</tabstop>
+  <tabstop>M_MRarea_input</tabstop>
+  <tabstop>M_MMVp_combo</tabstop>
+  <tabstop>M_BMV_check</tabstop>
+  <tabstop>M_meantrans_input</tabstop>
+  <tabstop>M_MMVp_check</tabstop>
+  <tabstop>M_others_check</tabstop>
+  <tabstop>M_MMV_check</tabstop>
+  <tabstop>M_chordae_check_2</tabstop>
+  <tabstop>M_meantrans_check</tabstop>
+  <tabstop>M_scler_check</tabstop>
+  <tabstop>M_normal_check</tabstop>
+  <tabstop>M_Veno_input</tabstop>
+  <tabstop>M_mitral_check</tabstop>
+  <tabstop>A_AR_combo</tabstop>
+  <tabstop>Per_eff_check</tabstop>
+  <tabstop>Per_combo</tabstop>
+  <tabstop>Per_eff_combo</tabstop>
+  <tabstop>with_without_combo</tabstop>
+  <tabstop>A_normal_check</tabstop>
+  <tabstop>A_BMV_check</tabstop>
+  <tabstop>A_MMV_check</tabstop>
+  <tabstop>A_scler_check</tabstop>
+  <tabstop>A_mitral_check</tabstop>
+  <tabstop>A_bicu_check</tabstop>
+  <tabstop>A_tricu_check</tabstop>
+  <tabstop>female_input</tabstop>
+  <tabstop>IVDd_input</tabstop>
+  <tabstop>PWDd_input</tabstop>
+  <tabstop>LVDd_input</tabstop>
+  <tabstop>LVDs_input</tabstop>
+  <tabstop>Ao_input</tabstop>
+  <tabstop>LA_input</tabstop>
+  <tabstop>LVEF_input</tabstop>
+  <tabstop>IVCexp_input</tabstop>
+  <tabstop>IVCixp_input</tabstop>
+  <tabstop>LVM_index_input</tabstop>
+  <tabstop>RVD_input</tabstop>
+  <tabstop>RVAd_input</tabstop>
+  <tabstop>RVAD2_input</tabstop>
+  <tabstop>RVFAC_input</tabstop>
+  <tabstop>RAA_input</tabstop>
+  <tabstop>TAPSE_input</tabstop>
+  <tabstop>EPSS_input</tabstop>
+  <tabstop>LVEF_input2</tabstop>
+  <tabstop>MV_input</tabstop>
+  <tabstop>AsAo_input</tabstop>
+  <tabstop>EA_input</tabstop>
+  <tabstop>MVEv_input</tabstop>
+  <tabstop>MVDt_input</tabstop>
+  <tabstop>Eneed_input</tabstop>
+  <tabstop>Elat_input</tabstop>
+  <tabstop>RVS_input</tabstop>
+  <tabstop>A_jet_input</tabstop>
+  <tabstop>A_PHT_input</tabstop>
+  <tabstop>A_veno_input</tabstop>
+  <tabstop>A_dias_combo</tabstop>
+  <tabstop>A_others_check</tabstop>
+  <tabstop>A_others</tabstop>
+  <tabstop>P_normal_check</tabstop>
+  <tabstop>P_PR_check</tabstop>
+  <tabstop>P_PR_combo</tabstop>
+  <tabstop>P_others_check</tabstop>
+  <tabstop>P_others</tabstop>
+  <tabstop>comment</tabstop>
+  <tabstop>T_normal_check</tabstop>
+  <tabstop>T_pro_check</tabstop>
+  <tabstop>T_post_check</tabstop>
+  <tabstop>T_septal_check</tabstop>
+  <tabstop>T_TR_check</tabstop>
+  <tabstop>T_TR_combo</tabstop>
+  <tabstop>T_TRarea_input</tabstop>
+  <tabstop>T_TRV_input</tabstop>
+  <tabstop>T_TV_check</tabstop>
+  <tabstop>T_others_check</tabstop>
+  <tabstop>T_others</tabstop>
+  <tabstop>T_anter_check</tabstop>
+  <tabstop>T_TRV_check</tabstop>
+  <tabstop>M_MVA_input</tabstop>
+  <tabstop>save_print_btn</tabstop>
+  <tabstop>reset_btn</tabstop>
+  <tabstop>M_MR_combo</tabstop>
+  <tabstop>M_myxo_check</tabstop>
+  <tabstop>M_MVA_check</tabstop>
+  <tabstop>M_chordae_check</tabstop>
+  <tabstop>M__fibro_check</tabstop>
+  <tabstop>save_btn</tabstop>
+  <tabstop>M_MRLA_input</tabstop>
+  <tabstop>A_AVA_check</tabstop>
+  <tabstop>A_AVVmax_input</tabstop>
+  <tabstop>PVSD_combo</tabstop>
+  <tabstop>Per_eff_input</tabstop>
+  <tabstop>M_ERO_input</tabstop>
+  <tabstop>A_AVPG_input</tabstop>
+  <tabstop>A_meantrans_check</tabstop>
+  <tabstop>A_AVA_input</tabstop>
+  <tabstop>M_mode_others_check</tabstop>
+  <tabstop>M_mode_others</tabstop>
+  <tabstop>A_AR_check</tabstop>
+  <tabstop>A_peckPG_input</tabstop>
+  <tabstop>W_inferior_check</tabstop>
+  <tabstop>W_abnormal_check</tabstop>
+  <tabstop>W_dysk_check</tabstop>
+  <tabstop>W_akinesis_check</tabstop>
+  <tabstop>W_lateral_check</tabstop>
+  <tabstop>W_posterior_check</tabstop>
+  <tabstop>W_hypo_check</tabstop>
+  <tabstop>W_normal_check</tabstop>
+  <tabstop>W_anterior_check</tabstop>
+  <tabstop>W_a_dyskinesis_check</tabstop>
+  <tabstop>W_a_posterior_check</tabstop>
+  <tabstop>W_m_lateral_check</tabstop>
+  <tabstop>W_m_septal_check</tabstop>
+  <tabstop>W_m_posterior_check</tabstop>
+  <tabstop>W_m_inferior_check</tabstop>
+  <tabstop>W_m_anterior_check</tabstop>
+  <tabstop>W_a_lateral_check</tabstop>
+  <tabstop>W_apical_check</tabstop>
+  <tabstop>W_m_akinesis_check</tabstop>
+  <tabstop>W_m_hypokinesis_check</tabstop>
+  <tabstop>W_a_anterior_check</tabstop>
+  <tabstop>W_m_dyskinesis_check</tabstop>
+  <tabstop>W_midcavity_check</tabstop>
+  <tabstop>W_a_septal_check</tabstop>
+  <tabstop>W_a_akinesis_check</tabstop>
+  <tabstop>W_a_hypokinesis_check</tabstop>
+  <tabstop>W_a_inferior_check</tabstop>
+  <tabstop>W_septal_check</tabstop>
+  <tabstop>W_basal_check</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
