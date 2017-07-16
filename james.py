@@ -32,7 +32,7 @@ class Ui_Form(object):
         self.scrollArea.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 1327, 1830))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, -563, 1332, 1531))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.gridLayout_7 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_2)
         self.gridLayout_7.setContentsMargins(0, 0, 0, 0)
@@ -621,6 +621,9 @@ class Ui_Form(object):
         self.T_TRV_check = QtWidgets.QCheckBox(self.frame_6)
         self.T_TRV_check.setObjectName("T_TRV_check")
         self.gridLayout_9.addWidget(self.T_TRV_check, 5, 0, 1, 2)
+        self.T_Trans_TV_input = QtWidgets.QLineEdit(self.frame_6)
+        self.T_Trans_TV_input.setObjectName("T_Trans_TV_input")
+        self.gridLayout_9.addWidget(self.T_Trans_TV_input, 6, 3, 1, 2)
         self.gridLayout_7.addWidget(self.frame_6, 6, 6, 1, 1)
         self.height_input = QtWidgets.QLineEdit(self.scrollAreaWidgetContents_2)
         self.height_input.setObjectName("height_input")
@@ -1243,4 +1246,14 @@ class Ui_Form(object):
         self.W_septal_check.setText(_translate("Form", "septal"))
         self.label_83.setText(_translate("Form", "(If abnormal)"))
         self.W_basal_check.setText(_translate("Form", "basal"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Form = QtWidgets.QWidget()
+    ui = Ui_Form()
+    ui.setupUi(Form)
+    Form.show()
+    sys.exit(app.exec_())
 

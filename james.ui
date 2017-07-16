@@ -61,9 +61,9 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
-        <width>1327</width>
-        <height>1830</height>
+        <y>-563</y>
+        <width>1332</width>
+        <height>1531</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_7">
@@ -1339,6 +1339,9 @@
              <string>TRV(m/s)</string>
             </property>
            </widget>
+          </item>
+          <item row="6" column="3" colspan="2">
+           <widget class="QLineEdit" name="T_Trans_TV_input"/>
           </item>
          </layout>
         </widget>

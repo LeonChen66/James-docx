@@ -175,7 +175,7 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
             content += '\n> TRV : ' + self.T_TRV_input.text() + ' m/s'
 
         if self.T_TV_check.isChecked():
-            content += '\n> Trans-TV PG : '
+            content += '\n> Trans-TV PG : ' + self.T_Trans_TV_input.text() + ' mm HG '
 
         if self.T_others_check.isChecked():
             content += '\n> Others : ' + self.T_others.toPlainText()
