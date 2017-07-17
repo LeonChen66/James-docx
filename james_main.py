@@ -109,17 +109,14 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         if self.A_normal_check.isChecked():
             content += '> '+self.A_normal_check.text()+'\n'
 
-        if self.A_BMV_check.isChecked():
+        if self.A_BAV_check.isChecked():
             content += '> ' + 'Bioprothetic AV' + '\n'
 
-        if self.A_MMV_check.isChecked():
-            content += '> '+ self.A_MMV_check.text() +'\n'
+        if self.A_MAV_check.isChecked():
+            content += '> '+ self.A_MAV_check.text() +'\n'
 
         if self.A_scler_check.isChecked():
             content += '> '+self.A_scler_check.text()+'\n'
-
-        if self.A_mitral_check.isChecked():
-            content += '> '+self.A_mitral_check.text()+' MV\n'
 
         if self.A_bicu_check.isChecked():
             content += '> '+self.A_bicu_check.text()+'\n'
@@ -132,8 +129,8 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
                 self.A_AVA_input.text()+' cm^2\n'
 
         if self.A_meantrans_check.isChecked():
-            content += '>  '+self.A_meantrans_check.text()+'\n'
-            content += '   >> AV PG : '+self.A_AVPG_input.text()+' mmHg\n'
+            content += '   >>'+self.A_meantrans_check.text()
+            content += ' AV PG : '+self.A_AVPG_input.text()+' mmHg\n'
             content += '   >> peak trans AV PG : ' + self.A_peckPG_input.text() + ' mmHg\n'
             content += '   >> AV Vmax : ' + self.A_AVVmax_input.text() + ' m/s\n'
 
@@ -175,7 +172,7 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
             content += '\n> TRV : ' + self.T_TRV_input.text() + ' m/s'
 
         if self.T_TV_check.isChecked():
-            content += '\n> Trans-TV PG : '
+            content += '\n> Trans-TV PG : ' + self.T_Trans_TV_input.text() + ' mm HG '
 
         if self.T_others_check.isChecked():
             content += '\n> Others : ' + self.T_others.toPlainText()
