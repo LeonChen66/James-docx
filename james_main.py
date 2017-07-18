@@ -326,7 +326,11 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         self.auto_word_cell('i_i', self.EPSS_input.text())
         self.auto_word_cell('j_i', self.IVCexp_input.text())
         self.auto_word_cell('k_i', self.IVCixp_input.text())
-        Res_value = '%.2f' %((float(self.IVCexp_input.text())-float(self.IVCixp_input.text()))*100/float(self.IVCexp_input.text()))
+        try:
+            Res_value = '%.2f' %((float(self.IVCexp_input.text())-float(self.IVCixp_input.text()))*100/float(self.IVCexp_input.text()))
+        except:
+            Res_value = ''
+
         self.auto_word_cell('l_i', Res_value)  #Respiratory charge = (exp-isp)/esp  (%)
         self.auto_word_cell('m_i', self.RVD_input.text())
         self.auto_word_cell('n_i', self.RVAd_input.text())
@@ -339,9 +343,17 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         # self.auto_word_cell('u_i', self..text())
         self.auto_word_cell('v_i', self.Eneed_input.text())
         self.auto_word_cell('w_i', self.Elat_input.text())
-        mean_e_value = '%.2f' %((float(self.Eneed_input.text())+float(self.Elat_input.text()))/2)
+        try:
+            mean_e_value = '%.2f' %((float(self.Eneed_input.text())+float(self.Elat_input.text()))/2)
+        except:
+            mean_e_value = ''
+
         self.auto_word_cell('x_i', mean_e_value)   #mean e'
-        E_e_value = '%.2f' %(float(self.MVEv_input.text())/float(mean_e_value))
+        try:
+            E_e_value = '%.2f' %(float(self.MVEv_input.text())/float(mean_e_value))
+        except:
+            E_e_value = ''
+
         self.auto_word_cell('y_i', E_e_value)
         self.auto_word_cell('z_i', self.RVS_input.text())
         self.auto_word_cell('a_j', self.PVSD_combo.currentText())
