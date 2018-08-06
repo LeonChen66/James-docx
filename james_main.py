@@ -93,10 +93,10 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
 
         if self.M_MR_check.isChecked():
             content += '  '+self.M_MR_check.text()+' : '+\
-                self.M_MR_combo.currentText()+'\n'
-            content += '   >> MR area : ' + self.M_MRarea_input.text() + ' cm^2\n'
-            content += '   >> MR area/LA area : ' + self.M_MRLA_input.text() + ' %\n'
-            content += '   >> Veno contrata: ' + self.M_Veno_input.text() + ' mm\n'
+                self.M_MR_combo.currentText()+''
+            content += '   >> MR area : ' + self.M_MRarea_input.text() + ' cm^2'
+            content += '   >> MR area/LA area : ' + self.M_MRLA_input.text() + ' %'
+            content += '   >> Veno contrata: ' + self.M_Veno_input.text() + ' mm'
             content += '   >> ERO : ' + self.M_ERO_input.text() + ' cm^2\n'
 
         if self.M_others_check.isChecked():
@@ -130,15 +130,15 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
 
         if self.A_meantrans_check.isChecked():
             content += '   >>'+self.A_meantrans_check.text()
-            content += ' AV PG : '+self.A_AVPG_input.text()+' mmHg\n'
-            content += '   >> peak trans AV PG : ' + self.A_peckPG_input.text() + ' mmHg\n'
+            content += ' AV PG : '+self.A_AVPG_input.text()+' mmHg'
+            content += '   >> peak trans AV PG : ' + self.A_peckPG_input.text() + ' mmHg'
             content += '   >> AV Vmax : ' + self.A_AVVmax_input.text() + ' m/s\n'
 
         if self.A_AR_check.isChecked():
-            content += '> AR : ('+self.A_AR_combo.currentText() +')\n'
-            content += '  >> jet height ratio = ' + self.A_jet_input.text()+' %\n'
-            content += '  >> PHT = ' + self.A_PHT_input.text()+' ms\n'
-            content += '  >> Veno contrata = ' + self.A_veno_input.text()+' mm\n'
+            content += '> AR : ('+self.A_AR_combo.currentText() +')'
+            content += '  >> jet height ratio = ' + self.A_jet_input.text()+' %'
+            content += '  >> PHT = ' + self.A_PHT_input.text()+' ms'
+            content += '  >> Veno contrata = ' + self.A_veno_input.text()+' mm'
             content += '  >> '+self.A_dias_combo.currentText()+' diastolic reversal flow\n'
 
         if self.A_others_check.isChecked():
@@ -169,14 +169,16 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
             content += '\n  >> TR area : '+self.T_TRarea_input.text()+ 'cm^2'
 
         if self.T_TRV_check.isChecked():
-            content += '\n> TRV : ' + self.T_TRV_input.text() + ' m/s'
+            content += '  > TRV : ' + self.T_TRV_input.text() + ' m/s'
 
         if self.T_TV_check.isChecked():
-            content += '\n> Trans-TV PG : ' + self.T_Trans_TV_input.text() + ' mm HG '
+            content += '  > Trans-TV PG : ' + self.T_Trans_TV_input.text() + ' mm HG '
 
         if self.T_others_check.isChecked():
             content += '\n> Others : ' + self.T_others.toPlainText()
 
+
+        content += '\n'
         self.auto_paragraph('TT',content)
 
     def pulmonary(self):
@@ -195,103 +197,115 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
     def wall_motion(self):
         content = ''
         if self.W_normal_check.isChecked():
-            content += '> '+self.W_normal_check.text()
+            content += self.W_normal_check.text()
 
         if self.W_abnormal_check.isChecked():
-            content +='> ' + self.W_abnormal_check.text() + ':'
+            content += self.W_abnormal_check.text() + ':'
 
         # -------- basal ---------
+        content_1=''
+
         if self.W_basal_check.isChecked():
-            content += '\n' + self.W_basal_check.text() + '('
+            content_1 += '' + self.W_basal_check.text() + ' ('
 
         if self.W_anterior_check.isChecked():
-            content += self.W_anterior_check.text() + ', '
+            content_1 += self.W_anterior_check.text() + ', '
 
         if self.W_septal_check.isChecked():
-            content += self.W_septal_check.text() + ', '
+            content_1 += self.W_septal_check.text() + ', '
 
         if self.W_inferior_check.isChecked():
-            content +=self.W_inferior_check.text()+ ', '
+            content_1 +=self.W_inferior_check.text()+ ', '
 
         if self.W_posterior_check.isChecked():
-            content += self.W_posterior_check.text() + ', '
+            content_1 += self.W_posterior_check.text() + ', '
 
         if self.W_lateral_check.isChecked():
-            content += self.W_lateral_check.text() + ', '
+            content_1 += self.W_lateral_check.text() + ', '
+
+        if self.W_abnormal_check.isChecked() and self.W_basal_check.isChecked():
+            content_1 += ') '
 
         if self.W_hypo_check.isChecked():
-            content += self.W_hypo_check.text() + ', '
+            content_1 += self.W_hypo_check.text() + ', '
 
         if self.W_akinesis_check.isChecked():
-            content += self.W_akinesis_check.text() + ', '
+            content_1 += self.W_akinesis_check.text() + ', '
 
         if self.W_dysk_check.isChecked():
-            content += self.W_dysk_check.text()
+            content_1 += self.W_dysk_check.text()
 
-        if self.W_abnormal_check.isChecked():
-            content += ')'
+
 
         # ------- midcavity ------
+        content_2 = ''
         if self.W_midcavity_check.isChecked():
-            content += '\n' + self.W_midcavity_check.text() + '('
+            content_2 += '' + self.W_midcavity_check.text() + ' ('
 
         if self.W_m_anterior_check.isChecked():
-            content += self.W_anterior_check.text() + ', '
+            content_2 += self.W_anterior_check.text() + ', '
 
         if self.W_m_septal_check.isChecked():
-            content += self.W_septal_check.text() + ', '
+            content_2 += self.W_septal_check.text() + ', '
 
         if self.W_m_inferior_check.isChecked():
-            content +=self.W_inferior_check.text()+ ', '
+            content_2 += self.W_inferior_check.text()+ ', '
 
         if self.W_m_posterior_check.isChecked():
-            content += self.W_posterior_check.text() + ', '
+            content_2 += self.W_posterior_check.text() + ', '
 
         if self.W_m_lateral_check.isChecked():
-            content += self.W_lateral_check.text() + ', '
+            content_2 += self.W_lateral_check.text() + ', '
+
+        if self.W_abnormal_check.isChecked() and self.W_midcavity_check.isChecked():
+            content_2 += ') '
 
         if self.W_m_hypokinesis_check.isChecked():
-            content += self.W_hypo_check.text() + ', '
+            content_2 += self.W_hypo_check.text() + ', '
 
         if self.W_m_akinesis_check.isChecked():
-            content += self.W_akinesis_check.text() + ', '
+            content_2 += self.W_akinesis_check.text() + ', '
 
         if self.W_m_dyskinesis_check.isChecked():
-            content += self.W_dysk_check.text()
+            content_2 += self.W_dysk_check.text()
 
-        if self.W_abnormal_check.isChecked():
-            content += ')'
+
         # ------- apical ----------
+        content_3 = ''
         if self.W_apical_check.isChecked():
-            content += '\n' + self.W_apical_check.text() + '('
+            content_3 += '' + self.W_apical_check.text() + ' ('
         if self.W_a_anterior_check.isChecked():
-            content += self.W_anterior_check.text() + ', '
+            content_3 += self.W_anterior_check.text() + ', '
 
         if self.W_a_septal_check.isChecked():
-            content += self.W_septal_check.text() + ', '
+            content_3 += self.W_septal_check.text() + ', '
 
         if self.W_a_inferior_check.isChecked():
-            content +=self.W_inferior_check.text()+ ', '
+            content_3 +=self.W_inferior_check.text()+ ', '
 
         if self.W_a_posterior_check.isChecked():
-            content += self.W_posterior_check.text() + ', '
+            content_3 += self.W_posterior_check.text() + ', '
 
         if self.W_a_lateral_check.isChecked():
-            content += self.W_lateral_check.text() + ', '
+            content_3 += self.W_lateral_check.text() + ', '
+
+        if self.W_abnormal_check.isChecked() and self.W_apical_check.isChecked():
+            content_3 += ') '
 
         if self.W_a_hypokinesis_check.isChecked():
-            content += self.W_hypo_check.text() + ', '
+            content_3 += self.W_hypo_check.text() + ', '
 
         if self.W_a_akinesis_check.isChecked():
-            content += self.W_akinesis_check.text() + ', '
+            content_3 += self.W_akinesis_check.text() + ', '
 
         if self.W_a_dyskinesis_check.isChecked():
-            content += self.W_dysk_check.text()
+            content_3 += self.W_dysk_check.text()
 
-        if self.W_abnormal_check.isChecked():
-            content += ')'
 
         self.auto_paragraph('WW',content)
+        self.auto_paragraph('w_i',content_1)
+        self.auto_paragraph('w_j', content_2)
+        self.auto_paragraph('w_k', content_3)
 
     def comment_word(self):
         self.auto_paragraph('CC',self.comment.toPlainText())
@@ -364,7 +378,10 @@ class mywindow(QtWidgets.QWidget,Ui_Form):
         if self.Per_eff_check.isChecked():
             content = ''
             content += self.Per_combo.currentText()
-            content += '-('+self.Per_eff_combo.currentText()+')' + ' '+self.Per_eff_input.text()+' cm '+ self.with_without_combo.currentText()+' echo-tamponade-sign'
+            if self.Per_combo.currentText()=='nil':
+                pass
+            else:
+                content += '-('+self.Per_eff_combo.currentText()+')' + ' '+self.Per_eff_input.text()+' cm '+ self.with_without_combo.currentText()+' echo-tamponade-sign'
             self.auto_word_cell('p_j',content)
 
         if self.M_mode_others_check.isChecked():
